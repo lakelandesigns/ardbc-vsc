@@ -529,10 +529,6 @@ function selectItem(itemName) {
 
 <p>
 
-<a class="btn external-link" href="https://www.leclandesigns.com" target="_blank" rel="noopener noreferrer">
-  Leclan Designs ↗
-</a> 
-
 <a class="btn external-link" href="https://www.ardbc.com" target="_blank" rel="noopener noreferrer">
   ARD BC ↗
 </a> 
@@ -545,9 +541,90 @@ function selectItem(itemName) {
   StruxenGeo ↗
 </a>
 
+</a>
+
+
+
+  </div>
+</section>
+<section class='cta' id='contact'><h2>Choose and Customize your Own</h2>
+
+<p>
+
+<a class="btn external-link" href="https://www.leclandesigns.com" target="_blank" rel="noopener noreferrer">
+  Leclan Designs ↗
+</a> 
+
 <a class="btn external-link" href="https://www.seadata.net" target="_blank" rel="noopener noreferrer">
   Sea Data Technologies ↗
-</a>
+</a> 
+
+<!-- Choose Your Own Section -->
+<section class="choose-your-own">
+
+  <div class="choose-container">
+
+    <h2>Choose Your Own</h2>
+
+    <p class="choose-subtitle">
+      Explore our services and choose the option that's right for you.
+    </p>
+
+    <div class="grid">
+
+      <!-- Leclan Designs Architecture -->
+      <div class="card">
+        <div class="card-content">
+          <h3>Leclan Designs Architecture</h3>
+
+          <p>Architecture Drafting • Engineering</p>
+
+          <a href="https://www.leclandesigns.com"
+             target="_blank"
+             rel="noopener noreferrer">
+            www.leclandesigns.com
+          </a>
+
+          <button class="choose-button"
+                  onclick="selectItem('Leclan Designs Architecture')">
+            Choose
+          </button>
+        </div>
+      </div>
+
+
+      <!-- Sea Data Technologies -->
+      <div class="card">
+        <div class="card-content">
+          <h3>Sea Data Technologies</h3>
+
+          <p>Host Management • Tech Gear & News • IT Services</p>
+
+          <a href="https://www.seadata.net"
+             target="_blank"
+             rel="noopener noreferrer">
+            www.seadata.net
+          </a>
+
+          <button class="choose-button"
+                  onclick="selectItem('Sea Data Technologies')">
+            Choose
+          </button>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<script>
+function selectItem(itemName) {
+  alert("You selected " + itemName);
+}
+</script>
 
 
 <section id='coming-soon' class='coming-soon-section'>
