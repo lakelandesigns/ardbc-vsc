@@ -328,6 +328,184 @@ html, body {
     width: 100%;
 }
 
+```css
+/* =========================
+   CONTACT SECTION
+========================= */
+
+.contact-section {
+  width: 100%;
+  padding: 80px 20px;
+  box-sizing: border-box;
+  background: #f5f5f5;
+}
+
+.contact-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.contact-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.contact-header h2 {
+  margin: 0 0 12px;
+  font-size: 32px;
+}
+
+.contact-header p {
+  margin: 0 auto;
+  max-width: 650px;
+  color: #666;
+  font-size: 16px;
+}
+
+
+/* FORM */
+
+.contact-form {
+  background: #ffffff;
+  padding: 35px;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  box-sizing: border-box;
+}
+
+
+/* TWO-COLUMN ROW */
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+
+/* FORM GROUP */
+
+.form-group {
+  margin-bottom: 22px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+
+/* INPUTS */
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 13px 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-family: inherit;
+  font-size: 15px;
+  box-sizing: border-box;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #111;
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 150px;
+}
+
+
+/* SUBMIT BUTTON */
+
+.contact-submit {
+  width: 100%;
+  padding: 14px 20px;
+
+  border: none;
+  border-radius: 6px;
+
+  background: #111;
+  color: #ffffff;
+
+  font-size: 16px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: opacity 0.2s ease;
+}
+
+.contact-submit:hover {
+  opacity: 0.85;
+}
+
+.contact-submit:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+
+/* FORM RESULT */
+
+.form-result {
+  display: none;
+
+  margin-top: 20px;
+  padding: 12px;
+
+  text-align: center;
+  border-radius: 6px;
+  font-weight: 500;
+}
+
+.form-result.success {
+  display: block;
+
+  background: #e8f5e9;
+  color: #1b5e20;
+}
+
+.form-result.error {
+  display: block;
+
+  background: #ffebee;
+  color: #b71c1c;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 700px) {
+
+  .contact-section {
+    padding: 60px 15px;
+  }
+
+  .contact-header h2 {
+    font-size: 28px;
+  }
+
+  .contact-form {
+    padding: 25px 20px;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+}
+```
+
+
 footer {
     width: 100%;
     box-sizing: border-box;
@@ -693,9 +871,250 @@ function selectItem(itemName) {
 
 </section>
 
+<!-- =========================
+     CONTACT SECTION
+========================= -->
+
+<section id="contact" class="contact-section">
+
+  <div class="contact-container">
+
+    <div class="contact-header">
+      <h2>Contact LakeLan<span class='gold'>Designs</span></h2>
+
+      <p>
+        Have a message to send? Topic to discuss? Project or inquiry? Send us a message and we'll get back to you within 48 hours.
+      </p>
+    </div>
+
+
+    <form id="contact-form" class="contact-form">
+
+      <!-- Web3Forms Access Key -->
+      <input
+        type="hidden"
+        name="access_key"
+        value="9acd8134-7532-4863-a112-a4f2fa1b61d2"
+      >
+
+      <!-- Email Subject -->
+      <input
+        type="hidden"
+        name="subject"
+        value="New Inquiry - Lakeland Designs Website"
+      >
+
+      <!-- Honeypot Spam Protection -->
+      <input
+        type="checkbox"
+        name="botcheck"
+        style="display: none;"
+      >
+
+
+      <div class="form-row">
+
+        <!-- EMAIL -->
+        <div class="form-group">
+
+          <label for="email">
+            Email Address *
+          </label>
+
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="your@email.com"
+            required
+          >
+
+        </div>
+
+
+        <!-- PHONE -->
+        <div class="form-group">
+
+          <label for="phone">
+            Phone Number
+          </label>
+
+          <input
+            type="tel"
+            id="phone"
+            name="phone"
+            placeholder="(555) 555-5555"
+          >
+
+        </div>
+
+      </div>
+
+
+      <!-- INQUIRY SUBJECT -->
+
+      <div class="form-group">
+
+        <label for="inquiry-subject">
+          Subject *
+        </label>
+
+        <input
+          type="text"
+          id="inquiry-subject"
+          name="inquiry_subject"
+          placeholder="How can we help you?"
+          required
+        >
+
+      </div>
+
+
+      <!-- MESSAGE -->
+
+      <div class="form-group">
+
+        <label for="message">
+          Message *
+        </label>
+
+        <textarea
+          id="message"
+          name="message"
+          rows="7"
+          placeholder="Tell us about your project or inquiry..."
+          required
+        ></textarea>
+
+      </div>
+
+
+      <!-- SUBMIT BUTTON -->
+
+      <button
+        type="submit"
+        id="submit-button"
+        class="contact-submit"
+      >
+        Send Inquiry
+      </button>
+
+
+      <!-- SUCCESS / ERROR MESSAGE -->
+
+      <div
+        id="form-result"
+        class="form-result"
+      ></div>
+
+    </form>
+
+  </div>
+
+</section>
+```
+
+
 <footer>
   © 2026 LakelanDesigns "Building ideas that stand the test of time." - S.A.
 </footer>
+
+```html
+<script>
+
+const form = document.getElementById("contact-form");
+const result = document.getElementById("form-result");
+const submitButton = document.getElementById("submit-button");
+
+
+form.addEventListener("submit", async function (event) {
+
+  event.preventDefault();
+
+
+  /* CHANGE BUTTON WHILE SENDING */
+
+  submitButton.disabled = true;
+
+  submitButton.textContent = "Sending...";
+
+
+  /* CREATE FORM DATA */
+
+  const formData = new FormData(form);
+
+
+  /* SEND TO WEB3FORMS */
+
+  try {
+
+    const response = await fetch(
+      "https://api.web3forms.com/submit",
+      {
+        method: "POST",
+        body: formData
+      }
+    );
+
+
+    const data = await response.json();
+
+
+    /* SUCCESS */
+
+    if (data.success) {
+
+      result.className = "form-result success";
+
+      result.textContent =
+        "Thank you! Your inquiry has been sent successfully. We will get back to you soon.";
+
+
+      /* CLEAR FORM */
+
+      form.reset();
+
+    }
+
+
+    /* ERROR */
+
+    else {
+
+      result.className = "form-result error";
+
+      result.textContent =
+        data.message ||
+        "Something went wrong. Please try again.";
+
+    }
+
+  }
+
+
+  /* CONNECTION ERROR */
+
+  catch (error) {
+
+    result.className = "form-result error";
+
+    result.textContent =
+      "Unable to send your inquiry. Please try again later.";
+
+  }
+
+
+  /* RESET BUTTON */
+
+  submitButton.disabled = false;
+
+  submitButton.textContent = "Send Inquiry";
+
+});
+
+</script>
+```
+
 
 </body>
 </html>
